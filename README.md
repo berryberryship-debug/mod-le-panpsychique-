@@ -17,8 +17,8 @@ Les résultats numériques et méthodologiques sont strictement séparés de cet
 
 Le travail est divisé en deux couches distinctes :
 
-* **Couche classique (`~/gw`)** : Champs de Ginzburg-Landau, topologie, annihilation de vortex, invariance contextuelle phase/amplitude.
-* **Couche quantique (`~/gw/05_quantique`)** : Décohérence non-markovienne, mémoire historique, phase de Berry, phase d'Uhlmann, fidélité de Bures.
+* **Couche classique** : Champs de Ginzburg-Landau, topologie, annihilation de vortex, invariance contextuelle phase/amplitude.
+* **Couche quantique** : Décohérence non-markovienne, mémoire historique, phase de Berry, phase d'Uhlmann, fidélité de Bures.
 
 ## 📊 Résultats numériques clés
 
@@ -34,7 +34,19 @@ Le travail est divisé en deux couches distinctes :
 * **V89** : Fidélité de Bures (Résultat final).
 
 ### Le résultat final (V89)
-La pureté (Plénitude) s'effondre rapidement. La fidélité de Bures (Vacuité) résiste plus longtemps (0.84 à gamma=0.05), mais finit par s'effondrer vers l'asymptote mathématique 1/√2. **Il n'y a pas de plateau résilient** : la structure géométrique est plus résiliente que l'état local, mais sa dégradation est inévitable sous décohérence.
+La pureté (Plénitude) s'effondre rapidement. La fidélité de Bures (Vacuité) résiste plus longtemps, mais finit par s'effondrer vers l'asymptote mathématique 1/√2 (0.7071). **Il n'y a pas de plateau résilient** : la structure géométrique est plus résiliente que l'état local, mais sa dégradation est inévitable sous décohérence.
+
+## 🖼️ Figures
+
+Voici les représentations visuelles des résultats finaux (V88 et V89) :
+
+![Résultat V89 - Fidélité de Bures](Meta_AI_v89_bures_pro_20261026.png)
+*(Figure V89 : Évolution de la pureté, de la fidélité et de l'angle de Bures sous déphasage)*
+
+![Résultat V88 - Balayage d'Uhlmann](Meta_AI_v88_uhlmann_pro_2026102.png)
+*(Figure V88 : Trace d'Uhlmann et convergence vers l'asymptote)*
+
+*(Note : si les images ne s'affichent pas, vérifie que les noms de fichiers ci-dessus correspondent exactement aux noms des images uploadées dans le dépôt).*
 
 ## ⚠️ Limites explicites
 
@@ -42,6 +54,7 @@ La pureté (Plénitude) s'effondre rapidement. La fidélité de Bures (Vacuité)
 * Aucune preuve que la Vacuité soit indépendante du substrat physique.
 * Le test V82 ne prouve pas que "seule la distribution compte" de manière universelle.
 * Le test V79 montre une dépendance à l'histoire, pas une "durée vécue" bergsonienne.
+* La valeur de l'asymptote (1/√2) dépend du modèle étudié (déphasage d'un qubit) et n'est pas une constante universelle de la nature.
 
 ## 📚 Frameworks théoriques mentionnés
 * **Philosophie** : Leibniz, Bergson, Sartre, Merleau-Ponty, Varela, Chalmers, Goff.
