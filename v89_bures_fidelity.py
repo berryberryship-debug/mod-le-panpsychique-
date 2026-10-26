@@ -8,7 +8,7 @@ N = 400
 dt = T / N
 gammas = [0.0, 0.05, 0.1, 0.2, 0.3, 0.5]
 
-# Matrices de Pauli
+# Matrice de Pauli Z
 sz = np.array([[1, 0], [0, -1]], dtype=complex)
 
 # ÉTAT INITIAL CORRIGÉ : Superposition |+>
@@ -26,6 +26,7 @@ def run_simulation():
     for gamma in gammas:
         rho = np.copy(rho_ideal)
         
+        # Évolution sous l'équation de Lindblad
         for _ in range(N):
             drho = (gamma / 2) * (sz @ rho @ sz - rho)
             rho = rho + drho * dt
