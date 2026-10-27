@@ -95,3 +95,10 @@ Pour transposer l'intuition de la mémoire globale sans abus de langage quantiqu
 * **Philosophie** : Leibniz, Bergson, Sartre, Merleau-Ponty, Varela, Chalmers, Goff, Bachelard.
 * **Physique** : Ginzburg-Landau, phase de Berry, phase d'Uhlmann, fidélité de Bures, Lindblad, TSVF (Aharonov/Cramer), Valeurs Faibles.
 * **Méthodologie** : Lakatos, contrôles négatifs, tests de permutation, IIT (Integrated Information Theory).
+## 🚀 Installation et exécution
+
+```bash
+pip install -r requirements.txt
+python v90_dissolution_soi.py
+python v91_tsvf_codetermination.py
+python v90_v91_coupled.py
