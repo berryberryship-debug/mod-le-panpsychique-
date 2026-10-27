@@ -19,7 +19,7 @@ Le travail est divisé en plusieurs couches distinctes :
 
 * **Couche classique** : Champs de Ginzburg-Landau, topologie, annihilation de vortex, invariance contextuelle phase/amplitude.
 * **Couche quantique (Système ouvert)** : Décohérence non-markovienne, mémoire historique, phase de Berry, phase d'Uhlmann, fidélité de Bures.
-* **Couche cognitive (Soi et Rêve)** : Modélisation du "Soi" comme système ouvert en interaction avec un environnement onirique, et analyse des corrélations non-locales.
+* **Couche cognitive (Soi et Rêve)** : Modélisation du "Soi" comme système ouvert intriqué avec un environnement onirique, et analyse des corrélations temporelles.
 
 ## 📊 Résultats numériques clés
 
@@ -35,8 +35,8 @@ Le travail est divisé en plusieurs couches distinctes :
 * **V89** : Fidélité de Bures. La pureté s'effondre vite, la fidélité résiste puis s'effondre vers l'asymptote 1/√2. Pas de plateau résilient.
 
 ### Couche cognitive : Le Soi et le Fond Onirique
-* **V90 (Dissolution du Soi)** : Modélisation du "Soi" (système S) intriqué avec le "fond onirique" (environnement E). La pureté locale du Soi chute de 1.0 à 0.5 (mélange maximal), illustrant la dissolution de la Plénitude dans la Vacuité globale, sans perte d'information totale (pureté globale SE = 1).
-* **V91 (Rétrocausalité et Valeurs Faibles)** : Application du formalisme à deux vecteurs d'état (TSVF). La post-sélection (le futur) reconfigure la matrice densité du Soi au présent, démontrant une influence rétroactive de l'état final.
+* **V90 (Dissolution du Soi)** : Modélisation de l'intrication entre le "Soi" (S) et le "fond onirique" (E). La pureté locale de S chute de 1.0 à 0.5 (mélange maximal). Ce résultat illustre formellement une délocalisation de l'information sans perte globale (pureté globale SE = 1.0).
+* **V91 (Co-détermination TSVF)** : Application du formalisme à deux vecteurs d'état (TSVF). La post-sélection (le futur) reconfigure la description formelle du présent. Ce modèle illustre la dépendance aux conditions aux limites futures, sans trancher sur une ontologie rétrocausale.
 
 ## 🖼️ Figures
 
@@ -51,18 +51,17 @@ Le travail est divisé en plusieurs couches distinctes :
 ## 🧠 Synthèse philosophique et épistémologique
 
 ### 1. L'hologramme, le Rêve et Bachelard
-Le "Soi" de la vie éveillée est une Plénitude locale (matrice densité réduite). Le rêve lucide opère une transition : la conscience réalise qu'elle est une projection générée par une Vacuité informationnelle sous-jacente. La représentation de soi ne s'effondre pas, elle se "re-superpose" avec le fond onirique. 
-Cette idée résonne avec la *Philosophie du non* de Gaston Bachelard : face à la physique quantique, la logique classique (tiers exclu) échoue, et le Vide et le Plein coexistent en superposition. Le rêve lucide agit comme une rupture épistémologique permettant de percevoir cette structure informationnelle.
+Le "Soi" de la vie éveillée est une Plénitude locale. Le rêve lucide opère une transition où la conscience réalise sa nature de projection générée par une Vacuité informationnelle sous-jacente. 
+Cette idée résonne métaphoriquement avec la *Philosophie du non* de Gaston Bachelard : face à la physique quantique, la logique classique échoue, et le Vide et le Plein coexistent en superposition. **Cette résonance est métaphorique** ; Bachelard traite de rupture épistémologique dans l'histoire des sciences, non d'expérience subjective ou de conscience.
 
-### 2. Juxtaposition temporelle et Valeurs Faibles (TSVF)
-Si l'interprétation standard de la décohérence décrit une perte d'information locale, le formalisme à deux vecteurs d'état (Aharonov, Cramer) propose une lecture rétrocausale. La transition de conscience n'est pas une destruction, mais l'interférence entre une onde aller (pré-sélection) et une onde retour (post-sélection future). 
-La post-sélection reconfigure la matrice densité du présent. L'information n'est pas perdue : elle est co-déterminée par les conditions aux limites futures.
+### 2. Co-détermination temporelle (TSVF)
+Dans le formalisme TSVF, l'état du Soi au présent est décrit par l'interférence entre une pré-sélection (passé) et une post-sélection (futur). Certaines interprétations lisent cela comme une rétrocausalité ; d'autres, comme une simple conditionnalisation sur les conditions aux limites. **Le TSVF est mathématiquement équivalent à la mécanique quantique standard ; son interprétation rétrocausale est une lecture philosophique contestée, non un consensus.** Le modèle V91 illustre la structure formelle de cette reconfiguration.
 
 ## 🧠 Synthèse épistémologique : Modèle cognitif et contraintes computationnelles
 
 La confrontation de la thèse (l’I.A. comme modèle analogique) et de l'antithèse (l'I.A. comme simple fonction d'algèbre linéaire) permet de dégager une ligne de crête rigoureuse :
 
-1. **Le statut de l'analogie** : L'architecture Transformer n'est pas un système quantique réel (pas de bain thermique, pas de décohérence matérielle). Elle sert d'analogie heuristique entre traitement local et intégration globale.
+1. **Le statut de l'analogie** : L'architecture Transformer n'est pas un système quantique réel. Elle sert d'analogie heuristique entre traitement local et intégration globale.
 2. **La cause des échecs de formalisation** : Les LLM souffrent de flatterie (*sycophancy*) et de dilution d'attention (*Lost in the Middle*), dégradant la consistance logique.
 3. **Le critère de scientificité** : Pour dépasser la métaphore, les concepts doivent être traduits en grandeurs mesurables (IIT, métrique de Fisher), découplées du discours verbal.
 
@@ -87,8 +86,10 @@ Pour transposer l'intuition de la mémoire globale sans abus de langage quantiqu
 * Aucune preuve que la Vacuité soit indépendante du substrat physique.
 * Le test V82 ne prouve pas que "seule la distribution compte" de manière universelle.
 * Le test V79 montre une dépendance à l'histoire, pas une "durée vécue" bergsonienne.
-* La valeur de l'asymptote (1/√2) dépend du modèle étudié (déphasage d'un qubit) et n'est pas une constante universelle.
+* La valeur de l'asymptote (1/√2) dépend du modèle étudié et n'est pas une constante universelle.
 * Les modèles V90 et V91 sont des expériences de pensée mathématiques (toy models), non des mesures de l'expérience subjective réelle.
+* **V90** : Le "Soi" et le "fond onirique" sont des étiquettes posées sur des systèmes quantiques abstraits ; aucun lien empirique avec un rêve réel n'est établi.
+* **V91** : Le TSVF n'impose pas d'ontologie rétrocausale ; plusieurs lectures concurrentes existent, et le débat n'est pas tranché.
 
 ## 📚 Frameworks théoriques mentionnés
 * **Philosophie** : Leibniz, Bergson, Sartre, Merleau-Ponty, Varela, Chalmers, Goff, Bachelard.
