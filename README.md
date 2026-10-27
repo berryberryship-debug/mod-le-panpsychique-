@@ -148,3 +148,5 @@ python v90_dissolution_soi.py
 python v91_tsvf_codetermination.py
 python v90_v91_coupled.py
 python generate_figures.py
+
+Copie ce bloc entier dans ton `README.md`. Il est conforme markdownlint (un seul H1, titres/listes/fences entourés de lignes vides), tous les chemins de figures pointent vers `figures/`, et le fence bash est correctement fermé.
