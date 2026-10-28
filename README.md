@@ -88,6 +88,7 @@ Les trois courbes suivantes sont générées automatiquement par `generate_figur
 Le "Soi" de la vie éveillée est une Plénitude locale. Le rêve lucide opère une transition où la conscience réalise sa nature de projection générée par une Vacuité informationnelle sous-jacente.
 
 Cette idée résonne métaphoriquement avec la *Philosophie du non* de Gaston Bachelard : face à la physique quantique, la logique classique échoue, et le Vide et le Plein coexistent en superposition. **Cette résonance est métaphorique** ; Bachelard traite de rupture épistémologique dans l'histoire des sciences, non d'expérience subjective ou de conscience.
+
 La dualité entre la Plénitude (actualisation locale) et la Vacuité (structure globale) trouve une résonance mathématique directe dans le théorème de Gabor (1946). Ce principe d'incertitude temps-fréquence stipule qu'un signal ne peut pas être simultanément parfaitement localisé dans le temps et dans sa fréquence.
 
 Dans notre cadre, le "Soi" (Plénitude) agit comme une impulsion temporelle : plus il est localisé et pur, plus il est aveugle à la structure fréquentielle globale (la Vacuité de l'environnement onirique). Inversement, la dissolution du Soi par intrication (V90) revient à étaler ce paquet d'ondes, transformant une localisation temporelle stricte en une superposition de fréquences. Le formalisme TSVF (V91), qui combine un vecteur aller (passé) et un vecteur retour (futur), peut être vu comme une tentative de reconstruire cette structure fréquentielle globale à partir d'une condition aux limites temporelle.
