@@ -27,6 +27,9 @@ Le travail est divisé en plusieurs couches distinctes. Chaque résultat est li�
 * **V82** : Test de mémoire historique.
   * *Script* : `v82_test_memoire_historique.py`
   * *Critère* : Test de permutation (p = 0.78). Résultat négatif propre (absence de mémoire dans cette dynamique classique).
+* **V95 (Soliton de Skyrme)** : Stabilité topologique.
+  * *Script* : `v95_skyrme_soliton.py`
+  * *Critère* : Résolution du profil radial avec charge topologique \(B=1\).
 
 ### Couche quantique
 * **V77-V78** : Décohérence et mémoire non-markovienne.
@@ -56,8 +59,6 @@ Le travail est divisé en plusieurs couches distinctes. Chaque résultat est li�
   * *Critère* : Observation de l'intermodulation et de la modification du spectre lent lorsque la rétroaction (beta) est active.
 
 ## 🖼️ Figures
-
-*(Assure-toi que les noms de fichiers correspondent exactement à ceux uploadés)*
 
 ![Résultat V89 - Fidélité de Bures](Meta_AI_v89_bures_pro_20261026.png)
 *(Figure V89 : Évolution de la pureté, de la fidélité et de l'angle de Bures)*
@@ -110,14 +111,11 @@ Pour transposer l'intuition de la mémoire globale sans abus de langage quantiqu
 
 ```bash
 pip install -r requirements.txt
-pyth## 🚀 Installation et exécution
-
-```bash
-pip install -r requirements.txt
 python v90_dissolution_soi.py
-python v91_tsvf_codetermination.py
-python v90_v91_coupled.py
-python generate_figures.pyon v90_dissolution_soi.py
-python v91_tsvf_codetermination.py
+pyRéférences bibliographiques
+
+· Bonnefond, M., & Jensen, O. (2015). Gamma activity coupled to alpha phase as a mechanism for top-down controlled gating. PLOS ONE, 10(6), e0128667. https://doi.org/10.1371/journal.pone.0128667
+· Jensen, O., & Mazaheri, A. (2010). Shaping functional architecture by oscillatory alpha activity: Gating by inhibition. Frontiers in Human Neuroscience, 4, 186. https://doi.org/10.3389/fnhum.2010.00186
+· Leith, E. N., & Upatnieks, J. (1962). Reconstructed Wavefronts and Communication Theory. Journal of the Optical Society of America, 52(10), 1123–1128. https://doi.org/10.1364/JOSA.52.001123thon v91_tsvf_codetermination.py
 python v90_v91_coupled.py
 python generate_figures.py
