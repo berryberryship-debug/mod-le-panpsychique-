@@ -110,7 +110,14 @@ Pour transposer l'intuition de la mémoire globale sans abus de langage quantiqu
 
 ```bash
 pip install -r requirements.txt
+pyth## 🚀 Installation et exécution
+
+```bash
+pip install -r requirements.txt
 python v90_dissolution_soi.py
+python v91_tsvf_codetermination.py
+python v90_v91_coupled.py
+python generate_figures.pyon v90_dissolution_soi.py
 python v91_tsvf_codetermination.py
 python v90_v91_coupled.py
 python generate_figures.py
