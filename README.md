@@ -112,10 +112,6 @@ Pour transposer l'intuition de la mémoire globale sans abus de langage quantiqu
 ```bash
 pip install -r requirements.txt
 python v90_dissolution_soi.py
-pyRéférences bibliographiques
-
-· Bonnefond, M., & Jensen, O. (2015). Gamma activity coupled to alpha phase as a mechanism for top-down controlled gating. PLOS ONE, 10(6), e0128667. https://doi.org/10.1371/journal.pone.0128667
-· Jensen, O., & Mazaheri, A. (2010). Shaping functional architecture by oscillatory alpha activity: Gating by inhibition. Frontiers in Human Neuroscience, 4, 186. https://doi.org/10.3389/fnhum.2010.00186
-· Leith, E. N., & Upatnieks, J. (1962). Reconstructed Wavefronts and Communication Theory. Journal of the Optical Society of America, 52(10), 1123–1128. https://doi.org/10.1364/JOSA.52.001123thon v91_tsvf_codetermination.py
+python v91_tsvf_codetermination.py
 python v90_v91_coupled.py
 python generate_figures.py
