@@ -83,6 +83,15 @@ Le principe d'incertitude temps-fréquence de Gabor (1946) fournit une analogie 
 1. **Le statut de l'analogie** : L'architecture Transformer n'est pas un système quantique réel. Elle sert d'analogie heuristique entre traitement local et intégration globale.
 2. **La cause des échecs de formalisation** : Les LLM souffrent de flatterie (*sycophancy*) et de dilution d'attention (*Lost in the Middle*).
 3. **Le critère de scientificité** : Pour dépasser la métaphore, les concepts doivent être traduits en grandeurs mesurables, découplées du discours verbal.
+4. ### 3.16. L'intersubjectivité sartrienne : Le Regard comme mesure quantique
+
+L'analyse du "Regard" chez Sartre (*L'Être et le Néant*) trouve un analogue formel dans la théorie de la mesure projective et les systèmes quantiques ouverts (V96, V97, V98).
+
+1. **Le Regard (V96)** : Le "Pour-Soi" (superposition, liberté) est effondré par le projecteur de l'Autre, le transformant en "En-Soi" (objet figé). L'application du projecteur détruit les termes hors-diagonale de la matrice densité (les cohérences), illustrant l'aliénation par l'objectivation.
+2. **L'Asymétrie (V97)** : Dans un système bipartite intriqué (Moi-Autre), chacun ne peut accéder qu'à la trace partielle (l'apparence) de l'autre. Les puretés locales chutent (0.5) tandis que la pureté globale (le couple) reste intacte. L'Autre ne voit pas ma trame intérieure, et je ne vois pas la sienne.
+3. **La Rencontre (V98)** : Le formalisme TSVF permet de décrire la relation comme une interférence entre pré-sélection (ma liberté passée) et post-sélection (le rôle que l'Autre m'impose). La valeur faible (weak value) peut devenir anomale, révélant un décalage entre ce que je suis et l'image que l'Autre me force à projeter.
+
+Ce modèle ne prétend pas expliquer la conscience sociale, mais il fournit une structure mathématique pour penser l'aliénation sartrienne et l'asymétrie irréductible de la rencontre.
 
 ### Applications concrètes
 
