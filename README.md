@@ -1,4 +1,4 @@
-8## Panpsychisme informationnel — Formalisation dynamique
+## Panpsychisme informationnel — Formalisation dynamique
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
