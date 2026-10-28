@@ -109,7 +109,8 @@ Pour transposer l'intuition de la mémoire globale sans abus de langage quantiqu
 
 ## 🚀 Installation et exécution
 
-```bash
+Pour lancer les simulations, exécutez les commandes suivantes dans votre terminal :
+
 pip install -r requirements.txt
 python v90_dissolution_soi.py
 python v91_tsvf_codetermination.py
