@@ -1,29 +1,40 @@
 # Note théorique : L'Inconscient de Hartmann, la Totalité et le "Subcevoir"
 
-**Statut** : Note exploratoire (hors code). À relier au cadre Vacuité / Plénitude.
+**Statut** : Note exploratoire (hors code). À relier au cadre Vacuité / Plénitude, en gardant une stricte séparation des niveaux d'analyse.
 
-## 1. La correction topologique (Fragment vs Totalité)
+## 1. Hartmann : Totalité et souffrance
 
-Une première formulation tendait à décrire l'inconscient comme "amputé du réel physique, de la douleur et de la lourdeur terrestre". Cette formulation est rejetée car elle opère une inversion de la topologie hartmannienne.
+Dans la philosophie d'Eduard von Hartmann, l'Inconscient n'est pas un fragment séparé du réel : il est le fond métaphysique dont procèdent le monde et ses manifestations. La Volonté et l'Idée y jouent des rôles distincts dans l'explication de la réalité.
 
-*   **Dans le dualisme (rejeté)** : L'inconscient serait un fragment léger, un résidu pur, séparé d'un corps lourd et douloureux. C'est un dualisme de type cartésien ou une lecture cognitive moderne (sub-liminal).
-*   **Chez Hartmann (retenu)** : L'Inconscient (das Unbewusste) est l'Absolu, la Totalité. Il n'est pas "sous" la conscience, il en est la condition de possibilité. Il génère la matière et la douleur, il n'en est pas amputé. Le pessimisme de Hartmann vient précisément de ce que la Volonté, en se réalisant dans le monde, engendre la souffrance.
+Une lecture dualiste (où l'intuition serait pure parce que temporairement séparée du corps) est rejetée. La douleur n'est pas extérieure à la Totalité ; elle appartient au monde que celle-ci rend possible. 
 
-## 2. Le statut du "Subcevoir"
+*Réserve terminologique* : l'usage de "superconscient" (überbewusst) ne doit pas être présenté comme une équivalence lexicale universelle de das Unbewusste. C'est ici une manière d'insister sur le caractère non réductible de l'Absolu à une conscience individuelle.
 
-Le préfixe *sub* implique une hiérarchie verticale (sous la conscience). Si l'on veut rester fidèle à Hartmann, l'inconscient est "superconscient" (überbewusst) autant qu'inconscient. 
+## 2. Le subcevoir : absence d'effort apparent, pas absence de coût
 
-Le terme "subcevoir" est conservé comme une description *phénoménologique* de l'intuition (l'idée arrive sans coût apparent, sans la fatigue du calcul), et non comme une description ontologique de l'inconscient.
+La formulation phénoménologique du "subcevoir" nécessite une distinction stricte entre trois moments :
+*   **Subcevoir** : une intuition apparaît sans que ses opérations préparatoires soient accessibles à la conscience.
+*   **Mise en forme** : l'intuition devient une proposition, une démonstration, une écriture ou une construction explicite.
+*   **Coût ressenti** : l'effort devient perceptible au cours de cette explicitation.
 
-## 3. Reformulation phénoménologique (Préserver l'expérience)
+Il faut distinguer deux sens du coût. L'absence d'effort *ressenti* lors de l'intuition est une observation phénoménologique. L'absence de coût *computationnel ou physique* serait une affirmation différente, qui exigerait des critères propres.
 
-La légèreté de l'intuition n'est pas une propriété de l'inconscient (qui contient tout, y compris la douleur). C'est une illusion locale : la conscience n'a pas encore payé le coût de la mise en forme (l'effort d'écriture, la formulation, la décohérence).
+*Précision sur la décohérence* : la décohérence désigne un processus physique défini concernant les cohérences quantiques d'un système ouvert. Son emploi dans ce cadre philosophique doit donc être explicitement signalé comme **analogique**, tant qu'un modèle précis n'établit pas la correspondance exacte.
+
+## 3. Vacuité / Plénitude : conserver l'asymétrie sans confondre les niveaux
+
+L'articulation entre le cadre physique et l'expérience subjective est féconde si les trois niveaux restent distincts :
+
+| Niveau | Concept | Définition proposée |
+| :--- | :--- | :--- |
+| **Ontologique** | **Vacuité** | Totalité relationnelle et fond des potentialités ; elle n'exclut ni la matière ni la souffrance. |
+| **Phénoménologique** | **Subcevoir** | Apparition locale d'un contenu dont le processus de formation n'est pas encore explicitement accessible. |
+| **Actualisation** | **Plénitude** | Mise en forme incarnée, explicitation et confrontation aux contraintes du monde. |
+
+**Statut de l'hypothèse** : La correspondance entre ces trois niveaux (ontologique, phénoménologique, physique) constitue l'hypothèse exploratoire du projet. Elle n'est pas encore une identité démontrée.
+
+## 4. Thèse phénoménologique centrale
 
 > *"L'inconscient n'est pas la vérité amputée du corps. Il est le corps et tout le reste, éprouvés sous l'aspect d'une légèreté que le corps ne peut pas encore soutenir."*
 
-## 4. Articulation avec le cadre Vacuité / Plénitude
-
-Ce débat philosophique s'articule parfaitement avec le modèle physique du projet :
-*   **La Vacuité (Inconscient / Hartmann)** : La structure globale, la Totalité des potentialités (y compris la douleur).
-*   **La Plénitude (Conscience incarnée)** : L'actualisation locale, la décohérence. Le point où le coût de la souffrance et de la lourdeur est réellement payé.
-*   **L'Intuition** : L'instant où la Plénitude capte un signal de la Vacuité *avant* que le coût de la décohérence ne soit payé.
+Cette formulation exprime la différence entre la totalité postulée et la capacité locale de l'incarner, sans prétendre que cette différence est déjà démontrée par la physique. Elle préserve l'expérience du subcevoir sans réduire l'Inconscient de Hartmann à une simple couche cognitive enfouie.
