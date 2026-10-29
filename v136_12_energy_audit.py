@@ -1,9 +1,11 @@
+"""
+V136.12 — Bilan énergétique (Assertions Dynamiques).
+Vérifie la conservation de l'énergie et de la norme pour le modèle A (fermé).
+"""
 import numpy as np
 from scipy.integrate import solve_ivp
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 
+# Paramètres
 N = 50
 t_hop = 1.0
 U = 1.0
@@ -21,7 +23,8 @@ def build_hamiltonian(phi):
         H[j_next, j] = -t_hop * np.exp(-1j * phase)
     return H
 
-def simulate(g_coupl, unidirectional=False, T=50.0, dt=0.05, rtol=1e-9, atol=1e-10):
+def simulate_ferme(g_coupl, T=50.0, dt=0.05, rtol=1e-10, atol=1e-12):
+    """Modèle A (rétroaction bidirectionnelle, fermé)."""
     H = build_hamiltonian(phi)
     x = np.arange(N)
     psi0 = np.exp(-0.05 * (x - j0)**2).astype(complex)
@@ -37,19 +40,12 @@ def simulate(g_coupl, unidirectional=False, T=50.0, dt=0.05, rtol=1e-9, atol=1e-
         
         H_psi = H @ psi
         H_psi += U * np.abs(psi)**2 * psi
-        
         if g_coupl > 0:
             H_psi[j0] += g_coupl * r[2] * psi[j0]
             
         dpsi = -1j * H_psi
-        
-        if unidirectional:
-            Omega = np.array([WX, 0.0, WZ]) 
-        else:
-            Omega = np.array([WX, 0.0, WZ + 2 * g_coupl * rho_j0])
-            
+        Omega = np.array([WX, 0.0, WZ + 2 * g_coupl * rho_j0])
         dr = np.cross(Omega, r)
-            
         return np.concatenate([dpsi.real, dpsi.imag, dr])
 
     sol = solve_ivp(rhs, (0, T), y0, t_eval=te, method="DOP853", rtol=rtol, atol=atol)
@@ -59,6 +55,7 @@ def simulate(g_coupl, unidirectional=False, T=50.0, dt=0.05, rtol=1e-9, atol=1e-
     psi = sol.y[:N] + 1j * sol.y[N:2*N]
     r = sol.y[2*N:]
     
+    # Énergies
     phase = 2 * np.pi * phi / N
     E_kin = np.zeros_like(te)
     for j in range(N):
@@ -70,23 +67,29 @@ def simulate(g_coupl, unidirectional=False, T=50.0, dt=0.05, rtol=1e-9, atol=1e-
     E_int = g_coupl * np.abs(psi[j0])**2 * r[2] if g_coupl > 0 else np.zeros_like(te)
     E_tot = E_kin + E_pot + E_q + E_int
     
-    return dict(t=te, psi=psi, r=r, E_tot=E_tot, E_int=E_int)
-
-def compute_observables(s_g, s_ref):
-    dens_g = np.abs(s_g["psi"])**2
-    dens_ref = np.abs(s_ref["psi"])**2
-    D_rho_max = np.max(np.sum(np.abs(dens_g - dens_ref), axis=0))
-    cost_abs = np.trapezoid(np.abs(s_g["E_int"]), s_g["t"])
-    cost_net = np.abs(np.trapezoid(s_g["E_int"], s_g["t"]))
-    return D_rho_max, cost_abs, cost_net
+    # Norme
+    norme = np.sum(np.abs(psi)**2, axis=0)
+    
+    return dict(t=te, E_tot=E_tot, norme=norme)
 
 if __name__ == "__main__":
-    print("=== V136.12 : Audit énergétique ===\n")
-    s_A = simulate(g_coupl=1.0, unidirectional=False)
-    s_D = simulate(g_coupl=1.0, unidirectional=True)
+    print("=== V136.12 : Bilan énergétique (Assertions Dynamiques) ===")
     
-    der_E_A = np.max(np.abs(s_A["E_tot"] - s_A["E_tot"][0]))
-    der_E_D = np.max(np.abs(s_D["E_tot"] - s_D["E_tot"][0]))
+    s = simulate_ferme(g_coupl=1.0)
     
-    print(f"Modèle A (Fermé) : Dérive E = {der_E_A:.2e}")
-    print(f"Modèle D (Ouvert) : Dérive E = {der_E_D:.2e}\n")
+    # Calcul des dérives
+    derive_E = np.max(np.abs(s["E_tot"] - s["E_tot"][0]))
+    derive_N = np.max(np.abs(s["norme"] - s["norme"][0]))
+    
+    print(f"Dérive max de l'énergie totale : {derive_E:.2e}")
+    print(f"Dérive max de la norme         : {derive_N:.2e}")
+    
+    # SEUILS DYNAMIQUES
+    seuil_E = 1e-6
+    seuil_N = 1e-6
+    
+    # ASSERTIONS
+    assert derive_E < seuil_E, f"ÉCHEC : Dérive d'énergie trop grande ({derive_E:.2e} > {seuil_E})"
+    assert derive_N < seuil_N, f"ÉCHEC : Dérive de norme trop grande ({derive_N:.2e} > {seuil_N})"
+    
+    print("-> SUCCÈS : Conservation de l'énergie et de la norme validée.")
