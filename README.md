@@ -18,13 +18,13 @@ Cette distinction est le fil directeur philosophique du projet. Elle guide la co
 Le travail est divisé en plusieurs couches distinctes. Chaque résultat est lié à son script et à un critère explicite de vérification.
 
 ### Couche classique
-* **V45-V46** : Champs de Ginzburg-Landau. *Script* : `v45_v46_ginzburg_landau.py`. *Critère* : Conservation d'énergie (erreur < 10^-15) et convergence stable sous raffinement dt/N.
+* **V45-V46** : Champs de Ginzburg-Landau. *Script* : `v45_v46_ginzburg_landau.py`. *Critère* : Suivi de l'énergie et étude de convergence sous raffinement de \(dt\) et de \(N\).
 * **V53** : Annihilation topologique de vortex. *Script* : `v53_vortex_annihilation.py`. *Critère* : Le winding number passe de 1 à 0.
-* **V82** : Test de mémoire historique. *Script* : `v82_test_memoire_historique.py`. *Critère* : Test de permutation (p = 0.78). Résultat négatif propre (absence de mémoire dans cette dynamique classique linéaire).
+* **V82** : Test de mémoire historique. *Script* : `v82_test_memoire_historique.py`. *Critère* : Résultat négatif : le test de permutation (\(p = 0.78\)) ne met pas en évidence de dépendance historique détectable dans les conditions simulées.
 * **V95 (Soliton de Skyrme)** : Stabilité topologique. *Script* : `v95_skyrme_soliton.py`. *Critère* : Résolution du profil radial avec charge topologique \(B=1\).
 
 ### Couche quantique
-* **V77-V78** : Décohérence et mémoire non-markovienne. *Scripts* : `v77_qsim_memory.py`, `v78_qsim_nonmarkov.py`. *Critère* : Chute de pureté vers 0.5 et récurrences quantiques.
+* **V77-V78** : Décohérence et mémoire non-markovienne. *Scripts* : `v77_qsim_memory.py`, `v78_qsim_nonmarkov.py`. *Critère* : Chute de pureté vers 0.5 (pour les paramètres simulés) et observation de récurrences quantiques.
 * **V79** : Test de Bergson. *Script* : `v79_bergson_test.py`. *Critère* : Divergence des trajectoires dues au passé de l'environnement.
 * **V89** : Fidélité de Bures. *Script* : `v89_bures_fidelity2.py`. *Critère* : Effondrement de la pureté, résistance de la fidélité vers une asymptote (dépendante de la convention).
 
@@ -40,11 +40,11 @@ Le travail est divisé en plusieurs couches distinctes. Chaque résultat est li�
 ### Couche hybride (Champ-Qubit) : Validation et Énergétique
 * **V136.11 à V136.12 (Moteur de référence)** : Modèle discret sur anneau (tight-binding) couplé à un qubit localisé.
     * *Critère de covariance* : Vérifiée numériquement (écart ~ \(10^{-15}\)).
-    * *Critère de conservation* : Le modèle A (rétroaction bidirectionnelle) conserve l'énergie à l'erreur du solveur. Le modèle D (unidirectionnel) est un système ouvert non conservatif ; il sert uniquement de test causal pour prouver l'importance de la rétroaction.
+    * *Test de rétroaction* : Le modèle A utilise une rétroaction bidirectionnelle et présente une dérive énergétique numérique compatible avec la tolérance du solveur. Le modèle D supprime la rétroaction du champ vers le qubit. La comparaison des trajectoires permet d'évaluer l'effet dynamique de cette modification ; son statut énergétique doit être établi à partir du bilan complet des observables.
 * **V132.8 à V132.10 (Énergétique du couplage)** : Balayage de l'intensité \(g\).
-    * *Activité* : L'activité cumulée du champ augmente fortement avec \(g\).
+    * *Activité* : L'activité cumulée correspond à l'intégrale de la puissance absolue du champ, et non au travail net. Elle augmente fortement avec \(g\).
+    * *Bilan* : Le script estime l'activité cumulée du champ et le transfert énergétique net du qubit. La fermeture du bilan énergétique global n'est pas établie par le contrôle actuel, qui omet la variation de l'énergie d'interaction.
     * *Loi d'échelle* : Un ajustement descriptif (sur 7 points enregistrés) donne \(A(g) \approx 4.325 g^{2.096}\). L'exposant est sensible au point à \(g=5\) (passe à ~2.46 si on l'enlève), il ne s'agit donc pas d'une loi universelle.
-    * *Bilan* : Le gain net du qubit est non monotone (négatif à \(g=3\), positif à \(g=5\)).
 
 ## 🖼️ Figures
 
@@ -75,14 +75,16 @@ L'augmentation de l'activité énergétique avec le couplage \(g\) offre une ré
 
 ## 🚀 Installation et exécution
 
-```bash
+Pour lancer les simulations, exécutez les commandes suivantes dans votre terminal (les fichiers doivent être présents à la racine du dépôt) :
+
 pip install -r requirements.txt
 python v90_dissolution_soi.py
 python v91_tsvf_codetermination.py
 python v90_v91_coupled.py
-python generate_figures.py## 📚 Références bibliographiques
+python generate_figures.py
+
+## 📚 Références bibliographiques
 
 *   Bonnefond, M., & Jensen, O. (2015). Gamma activity coupled to alpha phase as a mechanism for top-down controlled gating. *PLOS ONE*, 10(6), e0128667. [https://doi.org/10.1371/journal.pone.0128667](https://doi.org/10.1371/journal.pone.0128667)
 *   Jensen, O., & Mazaheri, A. (2010). Shaping functional architecture by oscillatory alpha activity: Gating by inhibition. *Frontiers in Human Neuroscience*, 4, 186. [https://doi.org/10.3389/fnhum.2010.00186](https://doi.org/10.3389/fnhum.2010.00186)
 *   Leith, E. N., & Upatnieks, J. (1962). Reconstructed Wavefronts and Communication Theory. *Journal of the Optical Society of America*, 52(10), 1123–1128. [https://doi.org/10.1364/JOSA.52.001123](https://doi.org/10.1364/JOSA.52.001123)
-python generate_figures.py
