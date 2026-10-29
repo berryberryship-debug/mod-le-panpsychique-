@@ -39,10 +39,10 @@ Le travail est divisé en plusieurs couches distinctes. Chaque résultat est li�
 
 ### Couche hybride (Champ-Qubit) : Validation et Énergétique
 * **V136.11 à V136.12 (Moteur de référence)** : Modèle discret sur anneau (tight-binding) couplé à un qubit localisé.
-    * *Critère de covariance* : Vérifiée numériquement (écart ~ \(10^{-15}\)).
-    * *Test de rétroaction* : Le modèle A utilise une rétroaction bidirectionnelle et présente une dérive énergétique numérique compatible avec la tolérance du solveur. Le modèle D supprime la rétroaction du champ vers le qubit. La comparaison des trajectoires permet d'évaluer l'effet dynamique de cette modification ; son statut énergétique doit être établi à partir du bilan complet des observables.
+    * *Critère de covariance* : Test spécifique de covariance de jauge, avec un écart mesuré de \(\sim 10^{-15}\) dans les conditions testées.
+    * *Test de rétroaction* : Le modèle A utilise une rétroaction bidirectionnelle et présente une dérive énergétique compatible avec la tolérance du solveur. Ce contrôle numérique ne démontre pas une conservation exacte de l'énergie du modèle théorique. Le modèle D supprime la rétroaction du champ vers le qubit. La comparaison des trajectoires permet d'évaluer l'effet dynamique de cette modification ; son statut énergétique doit être établi à partir du bilan complet des observables.
 * **V132.8 à V132.10 (Énergétique du couplage)** : Balayage de l'intensité \(g\).
-    * *Activité* : L'activité cumulée correspond à l'intégrale de la puissance absolue du champ, et non au travail net. Elle augmente fortement avec \(g\).
+    * *Activité* : Dans le balayage testé, l'activité cumulée du champ (intégrale de la puissance absolue, non le travail net) augmente avec \(g\).
     * *Bilan* : Le script estime l'activité cumulée du champ et le transfert énergétique net du qubit. La fermeture du bilan énergétique global n'est pas établie par le contrôle actuel, qui omet la variation de l'énergie d'interaction.
     * *Loi d'échelle* : Un ajustement descriptif (sur 7 points enregistrés) donne \(A(g) \approx 4.325 g^{2.096}\). L'exposant est sensible au point à \(g=5\) (passe à ~2.46 si on l'enlève), il ne s'agit donc pas d'une loi universelle.
 
@@ -68,7 +68,7 @@ L'augmentation de l'activité énergétique avec le couplage \(g\) offre une ré
 ## ⚠️ Limites explicites
 
 * Aucun lien avec la conscience n'est démontré de manière empirique.
-* La valeur de l'asymptote (1/√2) dépend du modèle.
+* La valeur de l'asymptote (1/√2 ou 0.5) dépend du modèle et de la convention de fidélité employée.
 * Les modèles V90, V91, V96-V98 sont des expériences de pensée mathématiques (toy models).
 * Les résultats V132-V136 valident des propriétés numériques du système implémenté. L'interprétation en termes de "Ça", "Surmoi" et "Malaise" relève de l'hypothèse philosophique.
 * L'ajustement en loi de puissance V132.9 est descriptif et basé sur 7 points enregistrés.
