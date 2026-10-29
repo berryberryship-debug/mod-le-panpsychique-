@@ -27,10 +27,10 @@ Le travail est divisé en plusieurs couches distinctes. Chaque résultat est li�
 * **V77-V78** : Décohérence et mémoire non-markovienne. *Scripts* : `v77_qsim_memory.py`, `v78_qsim_nonmarkov.py`. *Critère* : Chute de pureté vers 0.5 (pour les paramètres simulés) et observation de récurrences quantiques.
 * **V79** : Test de Bergson. *Script* : `v79_bergson_test.py`. *Critère* : Divergence des trajectoires dues au passé de l'environnement.
 * **V89** : Fidélité de Bures. *Script* : `v89_bures_fidelity2.py`. *Critère* : Effondrement de la pureté, résistance de la fidélité vers une asymptote (dépendante de la convention).
+* **V90 — Dissolution du Soi** : Intrication entre le "Soi" (S) et le "fond onirique" (E). *Script* : `v90_dissolution_soi.py`. *Critère* : Balayage paramétrique de l’intrication. Pour un état de Bell, obtenu à \(\theta=\pi/4\), la pureté locale de S vaut \(0.5\), tandis que la pureté globale SE reste égale à \(1.0\). *Assertions* : \(|P_S-0.5|<10^{-6}\) à \(\theta=\pi/4\) et \(|P_{SE}-1.0|<10^{-6}\).
+* **V91 — Co-détermination TSVF** : Opérateur de transition non hermitien. *Script* : `v91_tsvf_codetermination.py`. *Critère* : Calcul de la valeur faible de \(\sigma_z\) (Aharonov, Albert et Vaidman, 1988). *Assertions* : Recouvrement non nul, vérification de la valeur faible calculée, et vérification de \(|A_w|>1\) pour un jeu de paramètres choisi.
 
 ### Couche cognitive et phénoménologique
-* **V90 (Dissolution du Soi)** : Intrication entre le "Soi" (S) et le "fond onirique" (E). *Script* : `v90_dissolution_soi.py`. *Critère* : Pureté locale de S chute de 1.0 à 0.5, pureté globale SE reste à 1.0.
-* **V91 (Co-détermination TSVF)** : Formalisme à deux vecteurs d'état. *Script* : `v91_tsvf_codetermination.py`. *Critère* : Reconfiguration de la matrice densité par post-sélection.
 * **V96-V98 (Intersubjectivité sartrienne)** : Le "Regard" de l'Autre modélisé comme une mesure projective. *Scripts* : `v96_regard_projectif.py`, `v97_asymetrie_regard.py`, `v98_rencontre_tsvf.py`. *Critère* : Effondrement du "Pour-Soi" en "En-Soi" et asymétrie des traces partielles.
 
 ### Modèles de neurodynamique et systèmes couplés
@@ -38,13 +38,9 @@ Le travail est divisé en plusieurs couches distinctes. Chaque résultat est li�
 * **V94 (Forçage vs Coévolution)** : Oscillateurs de Stuart-Landau couplés. *Script* : `v94_forced_vs_coupled.py`. *Critère* : Observation de l'intermodulation et de la modification du spectre lent.
 
 ### Couche hybride (Champ-Qubit) : Validation et Énergétique
-* **V136.11 à V136.12 (Moteur de référence)** : Modèle discret sur anneau (tight-binding) couplé à un qubit localisé.
-    * *Critère de covariance* : L'écart mesuré de \(\sim 10^{-15}\) correspond spécifiquement au test d'identité matricielle de covariance de jauge (\(H(\phi+1) = G^\dagger H(\phi) G\)), dans les conditions testées.
-    * *Test de rétroaction* : Le modèle A utilise une rétroaction bidirectionnelle et présente une dérive énergétique compatible avec la tolérance du solveur. Ce contrôle numérique ne démontre pas une conservation exacte de l'énergie du modèle théorique. Le modèle D supprime la rétroaction du champ vers le qubit. La comparaison des trajectoires permet d'évaluer l'effet dynamique de cette modification.
-* **V132.8 à V132.10 (Énergétique du couplage)** : Balayage de l'intensité \(g\).
-    * *Activité* : Dans le balayage testé, l'activité cumulée du champ (intégrale de la puissance absolue, non le travail net) augmente avec \(g\).
-    * *Bilan* : Le script estime l'activité cumulée du champ et le transfert énergétique net du qubit. La fermeture du bilan énergétique global n'est pas établie par le contrôle actuel, qui omet la variation de l'énergie d'interaction.
-    * *Loi d'échelle* : Un ajustement descriptif (sur 7 points enregistrés) donne \(A(g) \approx 4.325 g^{2.096}\). L'exposant est sensible au point à \(g=5\) (passe à ~2.46 si on l'enlève), il ne s'agit donc pas d'une loi universelle.
+* **V136.11 — Comparaison des rétroactions** : *Script* : `v136_11_audit_cible.py`. *Critère* : Comparaison des trajectoires d’un modèle à rétroaction bidirectionnelle (A) et d’un modèle unidirectionnel (D), sous plusieurs tolérances numériques. Les écarts entre les trajectoires doivent être calculés à partir des simulations effectivement exécutées. Un écart significatif indique une différence entre les deux modèles pour les paramètres testés. *Limite* : ce script ne constitue pas, en l’état décrit, un test de covariance de jauge. Toute affirmation d’un écart de covariance de l’ordre de \(10^{-15}\) doit être reliée à une implémentation et à un résultat reproductibles.
+* **V136.12 — Bilan énergétique** : *Script* : `v136_12_energy_audit.py`. *Critère* : Vérification numérique de la conservation de l’énergie totale et de la norme du champ pour le modèle fermé (A). *Seuils d’acceptation proposés* : \(\Delta E_{\max} < 10^{-6}\) et \(\Delta N_{\max} < 10^{-6}\). Ces seuils doivent être vérifiés sur les valeurs réellement calculées. Les assertions doivent échouer si les critères ne sont pas satisfaits.
+* **V132.8 à V132.10 (Énergétique du couplage)** : Balayage de l'intensité \(g\). *Activité* : Dans le balayage testé, l'activité cumulée du champ augmente avec \(g\). *Bilan* : La fermeture du bilan énergétique global n'est pas établie par le contrôle actuel. *Loi d'échelle* : Un ajustement descriptif (sur 7 points enregistrés) donne \(A(g) \approx 4.325 g^{2.096}\), sensible au point à \(g=5\).
 
 ## 🖼️ Figures
 
@@ -70,9 +66,9 @@ L'augmentation de l'activité énergétique avec le couplage \(g\) offre une ré
 ## ⚠️ Limites explicites
 
 * Aucun lien avec la conscience n'est démontré de manière empirique.
-* La valeur asymptotique rapportée dépend de la convention de fidélité utilisée : fidélité racine (1/√2) ou fidélité au carré (0.5). Les valeurs observées doivent être interprétées dans le cadre du modèle simulé.
+* La valeur asymptotique rapportée dépend de la convention de fidélité utilisée : fidélité racine (1/√2) ou fidélité au carré (0.5).
 * Les modèles V90, V91, V96-V98 sont des expériences de pensée mathématiques (toy models).
-* Les résultats V132-V136 valident des propriétés numériques du système implémenté. L'interprétation en termes de "Ça", "Surmoi" et "Malaise" relève de l'hypothèse philosophique.
+* **Statut de validation** : Les assertions décrivent les critères à tester ; elles ne constituent pas, à elles seules, une validation. Les résultats ne seront considérés comme vérifiés qu'après exécution des scripts complets, contrôle des sorties et reproduction des calculs. Ces tests valident des propriétés numériques des modèles implémentés. Ils ne démontrent pas, à eux seuls, une hypothèse ontologique concernant la conscience.
 * L'ajustement en loi de puissance V132.9 est descriptif et basé sur 7 points enregistrés.
 
 ## 🚀 Installation et exécution
@@ -87,6 +83,7 @@ python generate_figures.py
 
 ## 📚 Références bibliographiques
 
+*   Aharonov, Y., Albert, D. Z., & Vaidman, L. (1988). How the result of a measurement of a component of the spin of a spin-1/2 particle can turn out to be 100. *Physical Review Letters*, 60(14), 1351–1354. [https://doi.org/10.1103/PhysRevLett.60.1351](https://doi.org/10.1103/PhysRevLett.60.1351)
 *   Bonnefond, M., & Jensen, O. (2015). Gamma activity coupled to alpha phase as a mechanism for top-down controlled gating. *PLOS ONE*, 10(6), e0128667. [https://doi.org/10.1371/journal.pone.0128667](https://doi.org/10.1371/journal.pone.0128667)
 *   Jensen, O., & Mazaheri, A. (2010). Shaping functional architecture by oscillatory alpha activity: Gating by inhibition. *Frontiers in Human Neuroscience*, 4, 186. [https://doi.org/10.3389/fnhum.2010.00186](https://doi.org/10.3389/fnhum.2010.00186)
 *   Leith, E. N., & Upatnieks, J. (1962). Reconstructed Wavefronts and Communication Theory. *Journal of the Optical Society of America*, 52(10), 1123–1128. [https://doi.org/10.1364/JOSA.52.001123](https://doi.org/10.1364/JOSA.52.001123)
