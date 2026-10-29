@@ -28,7 +28,7 @@ Le travail est divisé en plusieurs couches distinctes. Chaque résultat est li�
 * **V79** : Test de Bergson. *Script* : `v79_bergson_test.py`. *Critère* : Divergence des trajectoires dues au passé de l'environnement.
 * **V89** : Fidélité de Bures. *Script* : `v89_bures_fidelity2.py`. *Critère* : Effondrement de la pureté, résistance de la fidélité vers une asymptote (dépendante de la convention).
 * **V90 — Dissolution du Soi** : Intrication entre le "Soi" (S) et le "fond onirique" (E). *Script* : `v90_dissolution_soi.py`. *Critère* : Balayage paramétrique de l’intrication. Pour un état de Bell (\(\theta=\pi/4\)), la pureté locale de S vaut \(0.5\) et la pureté globale SE reste \(1.0\). *Assertions* : \(|P_S-0.5|<10^{-6}\) et \(|P_{SE}-1.0|<10^{-6}\).
-* **V91 — Co-détermination TSVF** : Opérateur de transition non hermitien. *Script* : `v91_tsvf_codetermination.py`. *Critère* : Calcul de la valeur faible de \(\sigma_z\) (Aharonov, Albert et Vaidman, 1988). L'état post-sélectionné doit être choisi avec un angle proche de \(-\pi/4\) pour garantir un recouvrement suffisamment faible et obtenir \(|A_w| > 1\). *Assertions* : Recouvrement non nul, vérification de la valeur faible, et vérification de \(|A_w|>1\).
+* **V91 — Co-détermination TSVF** : Opérateur de transition non hermitien. *Script* : `v91_tsvf_codetermination.py`. *Critère* : Calcul de la valeur faible de \(\sigma_z\) (Aharonov, Albert et Vaidman, 1988). L'angle de post-sélection est choisi pour garantir un recouvrement faible mais non nul. *Assertions dynamiques* : le script vérifie le recouvrement, calcule la valeur faible, et assure que \(|A_w| > 1\) pour ce jeu de paramètres.
 
 ### Couche cognitive et phénoménologique
 * **V96-V98 (Intersubjectivité sartrienne)** : Le "Regard" de l'Autre modélisé comme une mesure projective. *Scripts* : `v96_regard_projectif.py`, `v97_asymetrie_regard.py`, `v98_rencontre_tsvf.py`. *Critère* : Effondrement du "Pour-Soi" en "En-Soi" et asymétrie des traces partielles.
@@ -39,7 +39,7 @@ Le travail est divisé en plusieurs couches distinctes. Chaque résultat est li�
 
 ### Couche hybride (Champ-Qubit) : Validation et Énergétique
 * **V136.11 — Comparaison des rétroactions** : *Script* : `v136_11_audit_cible.py`. *Critère* : Comparaison des trajectoires d’un modèle à rétroaction bidirectionnelle (A) et d’un modèle unidirectionnel (D). Un écart significatif indique une différence pour les paramètres testés. *Limite* : ce script n'est pas un test de covariance de jauge.
-* **V136.12 — Bilan énergétique** : *Script* : `v136_12_energy_audit.py`. *Critère* : Vérification de la conservation pour le modèle fermé (A). *Seuils d'acceptation* : \(\Delta E_{\max} < 10^{-6}\) et \(\Delta N_{\max} < 10^{-6}\). Ces seuils sont des critères à valider par l'exécution, pas des résultats acquis.
+* **V136.12 — Bilan énergétique** : *Script* : `v136_12_energy_audit.py`. *Critère* : Vérification de la conservation pour le modèle fermé (A). Le script calcule \(\Delta E_{\max}\) et \(\Delta N_{\max}\) sur toute la trajectoire. *Assertions dynamiques* : le script lève une erreur si \(\Delta E_{\max} > 10^{-6}\) ou si \(\Delta N_{\max} > 10^{-6}\).
 * **V132.8 à V132.10 (Énergétique du couplage)** : Balayage de l'intensité \(g\). *Activité* : Dans le balayage testé, l'activité cumulée du champ augmente avec \(g\). *Loi d'échelle* : Un ajustement descriptif sur 7 points donne \(A(g) \approx 4.325 g^{2.096}\), sensible au point à \(g=5\). Il ne s'agit pas d'une loi physique établie.
 
 ## 🖼️ Figures
